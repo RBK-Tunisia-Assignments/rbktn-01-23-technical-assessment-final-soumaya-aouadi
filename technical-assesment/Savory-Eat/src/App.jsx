@@ -1,10 +1,16 @@
 //the default user to update and delete is {user_Id:1,username:'testuser',email:'test@test.com',password:'password}
-import React ,{useState}from "react";
+import React ,{useState, useEffect}from "react";
 import "./App.css";
 import Home from "./components/Home.jsx";
 import AllRecepies from "./components/AllRecipies.jsx"
+import OneRecipe from "./components/oneRecipe.jsx";
+import Add from "./components/Add.jsx";
+import dummyData from "./data/data.json";
+import axios from "axios";
 function App() {
 const [view,setView]=useState('Home')
+const [data,setData]=usestate("dummyData")
+const [one,setOne]=usestate(data[0])
   let changeView = (view) => {
     setView(view);
   };
